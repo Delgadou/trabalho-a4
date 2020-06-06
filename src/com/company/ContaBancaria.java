@@ -20,4 +20,8 @@ abstract class ContaBancaria {
     public void depositar(double valor)
     {
     }
+
+    public int getNumeroConta() {
+        return numeroConta;
+    }
 }
