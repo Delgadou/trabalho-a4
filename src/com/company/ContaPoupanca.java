@@ -1,6 +1,6 @@
 package com.company;
 
-public class ContaPoupanca extends ContaBancaria implements mostrarDados {
+public class ContaPoupanca extends ContaBancaria implements Imprimivel {
     protected double limite;
 
     public ContaPoupanca(int numeroConta, double saldo, double limite) {
@@ -30,4 +30,12 @@ public class ContaPoupanca extends ContaBancaria implements mostrarDados {
         return saldo;
     }
 
+    public double getLimite() {
+        return limite;
+    }
+
+    @Override
+    public void mostrarDados() {
+        System.out.println("Numero da conta: " + super.getNumeroConta() + "Saldo: " + super.getSaldo() + "Taxa Operação: " + getLimite());
+    }
 }

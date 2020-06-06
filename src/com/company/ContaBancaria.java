@@ -24,4 +24,8 @@ abstract class ContaBancaria {
     public int getNumeroConta() {
         return numeroConta;
     }
+
+    public double getSaldo() {
+        return saldo;
+    }
 }

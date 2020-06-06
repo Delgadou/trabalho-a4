@@ -1,6 +1,6 @@
 package com.company;
 
-public class ContaCorrente extends ContaBancaria implements mostrarDados {
+public class ContaCorrente extends ContaBancaria implements Imprimivel {
     protected double taxaOperacao = 0.03;
 
     public ContaCorrente(int numeroConta, double saldo) {
@@ -30,4 +30,13 @@ public class ContaCorrente extends ContaBancaria implements mostrarDados {
         return saldo;
     }
 
+    public double getTaxaOperacao()
+    {
+        return taxaOperacao;
+    }
+
+    @Override
+    public void mostrarDados() {
+        System.out.println("Numero da conta: " + super.getNumeroConta() + "Saldo: " + super.getSaldo() + "Taxa Operação: " + getTaxaOperacao());
+    }
 }
