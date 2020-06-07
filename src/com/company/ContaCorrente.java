@@ -1,7 +1,7 @@
 package com.company;
 
 public class ContaCorrente extends ContaBancaria implements Imprimivel {
-    protected double taxaOperacao = 0.03;
+    protected double taxaOperacao = 0.3;
 
     public ContaCorrente(int numeroConta, double saldo) {
         super(numeroConta, saldo);
@@ -25,6 +25,11 @@ public class ContaCorrente extends ContaBancaria implements Imprimivel {
         this.saldo = (saldo + valor) - valorTaxa;
     }
 
+    @Override
+    protected double getTaxaDeOperacao() {
+        return taxaOperacao;
+    }
+
     public double saldo()
     {
         return saldo;
@@ -36,7 +41,19 @@ public class ContaCorrente extends ContaBancaria implements Imprimivel {
     }
 
     @Override
+    public void transferir(double valor, ContaBancaria conta) {
+        double valorTaxa = valor*taxaOperacao;
+        this.saldo = saldo - valor - valorTaxa;
+        conta.saldo = conta.saldo + valor;
+    }
+
+    @Override
     public void mostrarDados() {
-        System.out.println("Numero da conta: " + super.getNumeroConta() + "Saldo: " + super.getSaldo() + "Taxa Operação: " + getTaxaOperacao());
+        System.out.println("Numero da conta: " + super.getNumeroConta() + " Saldo: " + super.getSaldo() + " Taxa Operação: " + getTaxaOperacao());
+    }
+
+    @Override
+    public void tipoConta() {
+        System.out.println("Conta Corrente");
     }
 }

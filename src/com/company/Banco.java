@@ -15,22 +15,24 @@ public class Banco {
     public void inserirConta(ContaBancaria conta)
     {
         bancoContas.add(conta);
-        System.out.println("Conta adicionada.");
+        System.out.println("Conta de numero " + conta.getNumeroConta() + " adicionada.");
     }
 
     public void removerConta(ContaBancaria conta)
     {
         bancoContas.remove(conta);
+        System.out.println("Conta de numero " + conta.getNumeroConta() + " removida.");
     }
 
     public void procurarConta(int numeroConta) {
         for (int i = 0; i < bancoContas.size(); i++) {
             if (bancoContas.get(i).getNumeroConta() == numeroConta) {
-                System.out.println(bancoContas.get(i));
+                System.out.print("Numero da conta: " + bancoContas.get(i).getNumeroConta());
+                System.out.print(" saldo: " + bancoContas.get(i).getSaldo() + " ");
+                bancoContas.get(i).tipoConta();
             } else {
                 System.out.println("Null");
             }
         }
     }
-
 }

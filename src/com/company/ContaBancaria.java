@@ -1,6 +1,6 @@
 package com.company;
 
-abstract class ContaBancaria {
+public abstract class ContaBancaria{
     protected int numeroConta;
     protected double saldo;
 
@@ -13,13 +13,9 @@ abstract class ContaBancaria {
         this.saldo = saldo;
     }
 
-    public void sacar(double valor)
-    {
-    }
+    public void sacar(double valor){}
 
-    public void depositar(double valor)
-    {
-    }
+    public void depositar(double valor){}
 
     public int getNumeroConta() {
         return numeroConta;
@@ -28,4 +24,13 @@ abstract class ContaBancaria {
     public double getSaldo() {
         return saldo;
     }
+
+    public void transferir(double valor, ContaBancaria conta) {
+    }
+
+    public void tipoConta(){}
+
+    protected abstract double getTaxaDeOperacao();
+
+
 }
