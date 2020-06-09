@@ -24,14 +24,14 @@ public class ContaPoupanca extends ContaBancaria implements Imprimivel {
         this.saldo = saldo + valor;
     }
 
-
+/*
     @Override
     public void transferir(double valor, ContaBancaria conta) {
         this.saldo = saldo - valor;
         conta.saldo = conta.saldo + valor;
     }
 
-
+*/
 
     @Override
     protected double getTaxaDeOperacao() {
@@ -49,7 +49,7 @@ public class ContaPoupanca extends ContaBancaria implements Imprimivel {
 
     @Override
     public void mostrarDados() {
-        System.out.println("Numero da conta: " + super.getNumeroConta() + "Saldo: " + super.getSaldo() + "Taxa Operação: " + getLimite());
+        System.out.println("Numero da conta: " + super.getNumeroConta() + " Saldo: " + super.getSaldo() + " Taxa Operação: " + getLimite());
     }
 
     @Override

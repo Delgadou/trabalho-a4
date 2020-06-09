@@ -25,12 +25,27 @@ public abstract class ContaBancaria{
         return saldo;
     }
 
-    public void transferir(double valor, ContaBancaria conta) {
-    }
-
     public void tipoConta(){}
 
     protected abstract double getTaxaDeOperacao();
 
-
+    public void transferir(double valor, ContaBancaria conta) {
+        if (this instanceof ContaCorrente) {
+            ContaCorrente contaccorrente = ((ContaCorrente) this);
+            boolean verificador = (this.getSaldo() - valor - contaccorrente.getTaxaDeOperacao()) > 0;
+            if (verificador) {
+                contaccorrente.sacar(valor);
+                conta.depositar(valor);
+            }
+        } else {
+            ContaPoupanca contapoupanca = ((ContaPoupanca) this);
+            boolean verificador = (contapoupanca.getSaldo() - valor) >= contapoupanca.getLimite();
+            if (verificador) {
+                contapoupanca.sacar(valor);
+                conta.depositar(valor);
+            }
+        }
+    }
 }
+
+

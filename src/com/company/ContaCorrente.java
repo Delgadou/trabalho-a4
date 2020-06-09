@@ -40,13 +40,14 @@ public class ContaCorrente extends ContaBancaria implements Imprimivel {
         return taxaOperacao;
     }
 
+    /*
     @Override
     public void transferir(double valor, ContaBancaria conta) {
         double valorTaxa = valor*taxaOperacao;
         this.saldo = saldo - valor - valorTaxa;
         conta.saldo = conta.saldo + valor;
     }
-
+*/
     @Override
     public void mostrarDados() {
         System.out.println("Numero da conta: " + super.getNumeroConta() + " Saldo: " + super.getSaldo() + " Taxa Operação: " + getTaxaOperacao());
