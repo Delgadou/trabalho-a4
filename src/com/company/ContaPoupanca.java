@@ -24,15 +24,6 @@ public class ContaPoupanca extends ContaBancaria implements Imprimivel {
         this.saldo = saldo + valor;
     }
 
-/*
-    @Override
-    public void transferir(double valor, ContaBancaria conta) {
-        this.saldo = saldo - valor;
-        conta.saldo = conta.saldo + valor;
-    }
-
-*/
-
     @Override
     protected double getTaxaDeOperacao() {
         return 0;
