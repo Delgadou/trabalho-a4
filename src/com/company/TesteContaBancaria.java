@@ -19,13 +19,13 @@ public class TesteContaBancaria {
 
         System.out.println("SALDO APOS PRIMEIRA TRANSFERENCIA \n");
 
-        cc1.transferir(100,cc2);
+        cc1.transferir(cc2,100);
         System.out.println("Saldo corrente: " + cc1.getSaldo());
         System.out.println("Saldo Poupanca: " + cc2.getSaldo() + " \n");
 
 
         System.out.println("SALDO APOS SEGUNDA TRANSFERENCIA \n");
-        cc2.transferir(50,cc1);
+        cc2.transferir(cc1,50);
         System.out.println("Saldo corrente: " + cc1.getSaldo());
         System.out.println("Saldo Poupanca: " + cc2.getSaldo());
     }

@@ -18,8 +18,8 @@ public class Main {
         cc2.mostrarDados();
         cp1.mostrarDados();
 
-        cc1.transferir(100,cp1);
-        cc1.transferir(100,cc2);
+        cc1.transferir(cp1,100);
+        cc1.transferir(cc2,100);
         cc1.mostrarDados();
         cc2.mostrarDados();
         cp1.mostrarDados();
