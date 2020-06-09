@@ -29,7 +29,7 @@ public abstract class ContaBancaria{
 
     protected abstract double getTaxaDeOperacao();
 
-    public void transferir(double valor, ContaBancaria conta) {
+    public void transferir(ContaBancaria conta, double valor) {
         if (this instanceof ContaCorrente) {
             ContaCorrente contaccorrente = ((ContaCorrente) this);
             boolean verificador = (this.getSaldo() - valor - contaccorrente.getTaxaDeOperacao()) > 0;
