@@ -8,9 +8,9 @@ public abstract class ContaBancaria{
     // para cada conta informada. use metodos sacar e depositar para isso.
 
 
-    public ContaBancaria(int numeroConta, double saldo) {
+    public ContaBancaria(int numeroConta) {
         this.numeroConta = numeroConta;
-        this.saldo = saldo;
+        this.saldo = 0.00;
     }
 
     public void sacar(double valor){}

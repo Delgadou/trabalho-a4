@@ -3,8 +3,8 @@ package com.company;
 public class ContaPoupanca extends ContaBancaria implements Imprimivel {
     protected double limite;
 
-    public ContaPoupanca(int numeroConta, double saldo) {
-        super(numeroConta, saldo);
+    public ContaPoupanca(int numeroConta) {
+        super(numeroConta);
     }
 
     @Override
@@ -40,12 +40,12 @@ public class ContaPoupanca extends ContaBancaria implements Imprimivel {
 
     @Override
     public void mostrarDados() {
-        System.out.println("Numero da conta: " + super.getNumeroConta() + " Saldo: " + super.getSaldo() + " Taxa OperaÃ§Ã£o: " + getLimite());
+        System.out.println("Numero da conta: " + super.getNumeroConta() + " Saldo: " + super.getSaldo() + " Taxa Operação: " + getLimite());
     }
 
     @Override
     public void tipoConta() {
-        System.out.println("Conta PoupanÃ§a");
+        System.out.println("Conta Poupança");
     }
 
 }

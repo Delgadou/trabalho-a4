@@ -8,9 +8,9 @@ public class Testebanco {
     public void testeBancooperacoes()
     {
         Banco banco = new Banco();
-        ContaCorrente cc1 = new ContaCorrente(1232131,500);
-        ContaPoupanca cc2 = new ContaPoupanca(123123,0);
-        ContaPoupanca cc3 = new ContaPoupanca(12233123,78);
+        ContaCorrente cc1 = new ContaCorrente(1232131);
+        ContaPoupanca cc2 = new ContaPoupanca(123123);
+        ContaPoupanca cc3 = new ContaPoupanca(12233123);
 
         //Adicionando as 2 contas ao banco de contas
         banco.inserirConta(cc1);
@@ -24,8 +24,7 @@ public class Testebanco {
 
         //Procurando uma conta.
         banco.procurarConta(12233123);
-
-
-    }
-
+        
+      }
+    
 }

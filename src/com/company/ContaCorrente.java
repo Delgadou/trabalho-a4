@@ -3,8 +3,8 @@ package com.company;
 public class ContaCorrente extends ContaBancaria implements Imprimivel {
     protected double taxaOperacao = 0.3;
 
-    public ContaCorrente(int numeroConta, double saldo) {
-        super(numeroConta, saldo);
+    public ContaCorrente(int numeroConta) {
+        super(numeroConta);
     }
 
     @Override

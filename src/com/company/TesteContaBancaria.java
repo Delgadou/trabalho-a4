@@ -10,8 +10,8 @@ public class TesteContaBancaria {
         Relatorio r = new Relatorio();
 
         //Criando 2 contas. 1 corrente e outra poupanca
-        ContaCorrente cc1 = new ContaCorrente(1232131,500);
-        ContaPoupanca cc2 = new ContaPoupanca(123123,0);
+        ContaCorrente cc1 = new ContaCorrente(1232131);
+        ContaPoupanca cc2 = new ContaPoupanca(123123);
 
         //Verificando saldo de cada conta
         System.out.println("Saldo corrente: " + cc1.getSaldo());
