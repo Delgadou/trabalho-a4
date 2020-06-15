@@ -27,16 +27,15 @@ public class Executavel {
 	
 	// Criar Conta
 	if (menuOption.equals("1")) {
-		System.out.println("-----------------");
 		System.out.println("Menu - Criação de Conta");
 		System.out.println("1 - Conta Corrente");
 		System.out.println("2 - Conta Poupança");
 		System.out.print("Selecione uma das opções acima: ");
     	String accOption = scan.next();
-    	System.out.println("-----------------");
     	
     	// Conta Corrente
     	if (accOption.equals("1")) {
+        	System.out.println("-----------------");
     		System.out.print("Informe o número da Conta Corrente: ");
     		int accNumber = scan.nextInt();
     		
@@ -45,6 +44,7 @@ public class Executavel {
     		
     	// Conta Poupança	
     	} else if (accOption.equals("2")) {
+        	System.out.println("-----------------");
     		System.out.print("Informe o número da Conta Poupança: ");
     		int accNumber = scan.nextInt();
     		
@@ -58,12 +58,10 @@ public class Executavel {
 	} else if (menuOption.equals("2")) {
 		System.out.print("Informe sua Conta: ");
 		int accSelecionada = scan.nextInt();
-		
-		
-		System.out.println("XXXXXX");
     	bancoDados.procurar(accSelecionada);
-    	System.out.println("XXXXXX");
-    	
+  	
+    	System.out.println("-----------------");
+    	System.out.println("Conta Selecionada: " + accSelecionada);
     	System.out.println("1 - Depositar");
     	System.out.println("2 - Sacar");
     	System.out.println("3 - Transferir");
@@ -74,26 +72,31 @@ public class Executavel {
     	
     	// Depositar
     	if (opOption.equals("1")) {
+        	System.out.println("-----------------");
     		System.out.print("Selecione um valor para depositar: ");
         	Double valor = scan.nextDouble();
         	lista.stream().filter(it -> it.numeroConta == accSelecionada).forEach(it -> it.depositar(valor));
         
         // Sacar	
     	} else if (opOption.equals("2")) {
+        	System.out.println("-----------------");
     		System.out.print("Selecione um valor para sacar: ");
         	Double valor = scan.nextDouble();
         	lista.stream().filter(it -> it.numeroConta == accSelecionada).forEach(it -> it.sacar(valor));
         	
         // Transferir	
         } else if (opOption.equals("3")) {
+        	System.out.println("-----------------");
     		System.out.print("Selecione um valor para transferir: ");
         	Double valor = scan.nextDouble();
         	System.out.print("Selecione uma conta para transferir: ");
         	int conta = scan.nextInt();
+        	lista.stream().filter(it -> it.numeroConta == accSelecionada).forEach(it -> it.transferir(bancoDados.procurar(conta), valor));
         	
         	
         // Relatório da Conta
         } else if (opOption.equals("4")) {
+        	System.out.println("-----------------");
     		bancoDados.procurarConta(accSelecionada);
         }
     	

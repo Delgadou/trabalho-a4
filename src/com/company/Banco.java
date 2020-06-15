@@ -35,7 +35,7 @@ public class Banco {
                 System.out.print(" saldo: " + bancoContas.get(i).getSaldo() + " ");
                 bancoContas.get(i).tipoConta();
             } else {
-                System.out.println("Null");
+                System.out.println("Conta Inexistente!");
             }
         }
     }
@@ -45,7 +45,7 @@ public class Banco {
             if (bancoContas.get(i).getNumeroConta() == numeroConta) {
                 return bancoContas.get(i);
             } else {
-                System.out.println("Null");
+                System.out.println("Conta Inexistente!");
             }
         }
 		return null;
