@@ -36,6 +36,7 @@ public abstract class ContaBancaria{
             if (verificador) {
                 contaccorrente.sacar(valor);
                 conta.depositar(valor);
+                System.out.println("Transferencia concluida");
             }
         } else {
             ContaPoupanca contapoupanca = ((ContaPoupanca) this);
@@ -43,6 +44,7 @@ public abstract class ContaBancaria{
             if (verificador) {
                 contapoupanca.sacar(valor);
                 conta.depositar(valor);
+                System.out.println("Transferencia concluida");
             }
         }
     }

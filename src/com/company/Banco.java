@@ -45,7 +45,7 @@ public class Banco {
             if (bancoContas.get(i).getNumeroConta() == numeroConta) {
                 return bancoContas.get(i);
             } else {
-                System.out.println("Conta Inexistente!");
+                System.out.println("");
             }
         }
 		return null;
